@@ -32,27 +32,18 @@ class CustomView(context: Context, @Nullable attrs: AttributeSet) :
         btnClick = view.findViewById(R.id.btnClick)
 
         val typedArray = context.theme.obtainStyledAttributes(attrs, R.styleable.CustomView, 0, 0)
-//        val typedArray1 = context.theme.obtainStyledAttributes(attrs, R.styleable.CustomViewButton, 0, 0)
 
         try {
             imageDrawable = typedArray.getDrawable(R.styleable.CustomView_setImageDrawable)
             title = typedArray.getString(R.styleable.CustomView_setTitle)
             subtitle = typedArray.getString(R.styleable.CustomView_setSubTitle)
             buttonText = typedArray.getString(R.styleable.CustomView_setTitle)
-
             imageView.setImageDrawable(imageDrawable)
             titleTextView.text = title
             subtitleTextView.text = subtitle
             btnClick.text = buttonText
-
-            /*
-                Add Custom Attributes
-             */
             titleTextView.textSize = 30F
             titleTextView.setTextColor(Color.BLACK)
-
-            /////////////
-
             subtitleTextView.setTextColor(Color.RED)
 
         } finally {
@@ -89,7 +80,8 @@ class CustomView(context: Context, @Nullable attrs: AttributeSet) :
     fun getButton(): String? {
         return buttonText
     }
+
     fun setButton(text: String?) {
-        btnClick.text= text
+        btnClick.text = text
     }
 }

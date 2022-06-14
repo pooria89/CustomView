@@ -9,13 +9,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val t1: CustomView = findViewById(R.id.sunrise_custom_view)
-        val t2: CustomView = findViewById(R.id.sunset_custom_view)
-        val t3: CustomView = findViewById(R.id.button232)
+        val txtSunrise: CustomView = findViewById(R.id.sunrise_custom_view)
+        val txtSunset: CustomView = findViewById(R.id.sunset_custom_view)
+        val btnClick: CustomView = findViewById(R.id.btn_click)
 
-        t1.setSubtitle("5:31 AM") // sunrise time set as subtitle
-        t2.setSubtitle("5:01 PM") //
-        t3.setButton("salam")
+        /**
+         * txtSunrise
+         */
+        txtSunrise.setSubtitle("textView1")
+        txtSunrise.setTitle("1")
+        txtSunrise.setImageDrawable(resources.getDrawable(R.drawable.user))
+
+        /**
+         * txtSunset
+         */
+        txtSunset.setSubtitle("textView2")
+        txtSunset.setTitle("2")
+        txtSunset.setImageDrawable(resources.getDrawable(R.drawable.user))
+
+
+        /**
+         * btnClick
+         */
+        btnClick.setButton("button")
+//        btnClick.setImageDrawable(resources.getDrawable(R.drawable.user))
 
     }
 }
